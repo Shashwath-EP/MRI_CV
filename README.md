@@ -18,6 +18,21 @@
 
 ## Project Description
 This project uses advanced deep-learning models to segment brain metastases from MRI images. Brain metastasis detection is crucial for early treatment but presents challenges such as small lesion sizes, low contrast, and imbalanced data. We implement **Nested U-Net (U-Net++)** and **Attention U-Net** for precise segmentation, using **CLAHE** preprocessing and augmentation to improve performance. The models are evaluated using the **DICE Score**, and a web application is developed using **FastAPI** and **Streamlit** to allow real-time metastasis segmentation for clinical use.
+brain_mri_segmentation/
+│
+├── data/
+│   └── images/ (Place your dataset here)
+│
+├── models/
+│   └── model_weights/ (Saved model weights here)
+│
+├── app.py (Streamlit application)
+├── backend.py (FastAPI backend)
+├── train.py (Model training script)
+├── utils.py (Data preprocessing and utility functions)
+├── README.md
+└── requirements.txt
+
 
 ## Architectures
 
