@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain MRI Segmentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Brain MRI Segmentation</h1>
+        
+        <div class="upload-section">
+            <label for="imageUpload">Choose an MRI image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        
+        <div class="model-selection">
+            <label for="modelSelect">Choose a model:</label>
+            <select id="modelSelect">
+                <option value="nested_unet">Nested U-Net</option>
+                <option value="attention_unet">Attention U-Net</option>
+            </select>
+        </div>
+
+        <button id="predictButton">Predict</button>
+
+        <div id="resultSection">
+            <h2>Results</h2>
+            <div id="originalImage">
+                <h3>Uploaded Image</h3>
+                <img id="uploadedImage" src="#" alt="Uploaded Image">
+            </div>
+
+            <div id="maskImage">
+                <h3>Predicted Mask</h3>
+                <img id="predictedMask" src="#" alt="Predicted Mask">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
